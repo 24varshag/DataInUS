@@ -1,0 +1,192 @@
+body {
+  background-color: #03045e;
+  color: rgba(255, 255, 255, 0.844);
+}
+
+h1 {
+  color: darkblue;
+}
+
+svg {
+  margin-bottom: 20px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: rgba(255, 255, 255, 0.844);
+}
+
+.dashboard {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+.section-a {
+  width: 35%;
+  flex-direction: column;
+}
+.section-b {
+  width: 50%;
+  flex-direction: column;
+}
+.section-c {
+  width: 15%;
+  flex-direction: column;
+}
+.chart,
+.scatter-container,
+.map-container,
+.stat-box {
+  flex: 1;
+  padding: 10px;
+  /* border: 2px solid blue; */
+  border-radius: 7px;
+  margin: 10px 5px;
+  background-color: #023d8aa3;
+}
+#scatterplot,
+#map {
+}
+.county {
+  stroke: #fff;
+  stroke-width: 0.5px;
+}
+
+.map-container {
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  align-items: center;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+  pointer-events: none;
+  opacity: 0;
+  color: black;
+}
+
+.dropdownDiv {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.dropdownDiv label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.dropdownDiv select {
+  font-size: 16px;
+  padding: 10px;
+  border: 2px solid #0077b6;
+  border-radius: 2px;
+  border: none;
+  background-color: #f0f8ff;
+  color: #003566;
+  cursor: pointer;
+  width: 500px;
+}
+
+.dropdownDiv button {
+  font-size: 16px;
+  padding: 10px 15px;
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.dropdownDiv button:hover {
+  background-color: #cc3700;
+}
+
+.stat-box {
+  height: calc(800px / 3);
+}
+
+#num-counties,
+#avg-poverty,
+#avg-health {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+#about {
+  background-color: #016398;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 2px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#about:hover {
+  background-color: #0077b6; /* Darker green background on hover */
+}
+
+#about:active {
+  background-color: #016398; /* Even darker green background when clicked */
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #caf0f8;
+  color: #016398;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 800px;
+  height: 500px;
+}
+
+.tutorial {
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.538);
+  padding: 20px;
+  border-radius: 8px;
+}
+li {
+  margin-top: 5px;
+}
+
+#close-popup {
+  background-color: #016398;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 2px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}

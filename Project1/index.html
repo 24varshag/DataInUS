@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>US Health and Wealth Disparities</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="Header">
+      <h1>US Health & Wealth Disparities</h1>
+      <div class="dropdownDiv">
+        <label for="scatter-toggle">Select Comparison:</label>
+        <select id="scatter-toggle">
+          <option value="percent_coronary_heart_disease">
+            Poverty vs. Heart Disease
+          </option>
+          <option value="percent_high_cholesterol">
+            Poverty vs. High Cholesterol
+          </option>
+          <option value="percent_high_blood_pressure">
+            Poverty vs. High Blood Pressure
+          </option>
+          <option value="percent_stroke">Poverty vs. Stroke</option>
+        </select>
+        <button id="clear-selection">Clear Selection</button>
+      </div>
+
+      <button id="about">About</button>
+      <div id="about-popup" class="popup">
+        <div class="popup-content">
+          <h2>Project 1: Data in the USA</h2>
+          <p>By: Varsha Govardhanam</p>
+
+          <div class="tutorial">
+            <h2>Quick Guide: What You Can Do</h2>
+            <ul>
+              <li>
+                <strong>Explore Data</strong> - View health and socioeconomic
+                disparities across U.S. counties.
+              </li>
+              <li>
+                <strong>Select Comparisons</strong> - Compare poverty rates with
+                different health conditions using the dropdown.
+              </li>
+              <li>
+                <strong>Interactive Scatterplot</strong> - Click and drag to
+                select multiple counties and analyze correlations.
+              </li>
+              <li>
+                <strong>Choropleth Map</strong> - Hover over counties to view
+                detailed statistics on poverty, income, and health.
+              </li>
+              <li>
+                <strong>Histograms</strong> - Visualize distributions of poverty
+                rates and selected health metrics as they are updated along with
+                scatter plot selections.
+              </li>
+              <li>
+                <strong>Live Statistics</strong> - Get updates on selected
+                counties' average poverty and health rates.
+              </li>
+              <li>
+                <strong>Reset Selection</strong> - Use the "Clear Selection"
+                button to reset your analysis.
+              </li>
+            </ul>
+
+            <div style="text-align: center">
+              <p>
+                <a href="https://sites.google.com/view/varshasportfolio/home"
+                  >View my Documentation ☺
+                </a>
+              </p>
+
+              <button id="close-popup">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <label for="map-toggle">Select Attribute:</label>
+    <select id="map-toggle">
+      <option value="poverty_perc">Poverty Rate</option>
+      <option value="percent_coronary_heart_disease">Heart Disease Rate</option>
+      <option value="percent_high_cholesterol">High Cholesterol</option>
+      <option value="percent_high_blood_pressure">High Blood Pressure</option>
+      <option value="percent_stroke">Stroke Rate</option>
+    </select> -->
+
+    <div class="dashboard">
+      <div class="section-a">
+        <div class="chart">
+          <h3>Poverty Rate Distribution</h3>
+          <svg id="histogram1"></svg>
+        </div>
+        <div class="chart">
+          <h3>Heart Disease Distribution</h3>
+          <svg id="histogram2"></svg>
+        </div>
+      </div>
+
+      <div class="section-b">
+        <div class="scatter-container">
+          <h3>Scatterplot</h3>
+          <svg id="scatterplot"></svg>
+        </div>
+        <div class="map-container">
+          <h3>Choropleth Map</h3>
+          <svg id="map"></svg>
+        </div>
+      </div>
+      <div class="tooltip" id="tooltip"></div>
+
+      <div class="section-c">
+        <div class="stat-box">
+          <h3>Selected Counties</h3>
+          <p id="num-counties"></p>
+        </div>
+        <div class="stat-box">
+          <h3>Average Poverty Rate</h3>
+          <p id="avg-poverty"></p>
+        </div>
+        <div class="stat-box" id="health-stat-box">
+          <h3>Average Health Disease Rate</h3>
+          <p id="avg-health"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
